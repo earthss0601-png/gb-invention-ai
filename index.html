@@ -165,6 +165,31 @@ td input,td select{border:0;background:transparent;padding:6px}
 .mail{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px;border:2px dashed var(--ink);background:var(--card)}
 .mail code{font-family:var(--mono);font-size:1.1rem;user-select:all;word-break:break-all}
 
+/* tools */
+.route{display:grid;gap:0;background:var(--card);border:2px solid var(--ink)}
+.rstep{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:16px;border-top:1px solid var(--line)}
+.rstep:first-child{border-top:0}
+.rstep .k{font-family:var(--display);font-size:1.6rem;line-height:1;width:44px;height:44px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--hi-soft)}
+.rstep h3{font-size:1.15rem;margin-bottom:4px}
+.rstep p,.rstep li{font-size:.95rem;color:var(--ink-2)}
+.rstep ul{margin:6px 0 0;padding-left:1.15em;display:grid;gap:3px}
+.rstep .tip{margin-top:8px;font-size:.88rem;background:var(--hi-soft);padding:6px 10px;color:var(--ink)}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tool{background:var(--card);border:1px solid var(--line);padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.tool .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.tool dl{margin:0;display:grid;grid-template-columns:64px 1fr;gap:4px 10px;font-size:.9rem}
+.tool dt{font-weight:700;color:var(--ink-2)}
+.tool dd{margin:0}
+.st{font-size:.75rem;font-weight:700;padding:2px 9px;border-radius:99px;white-space:nowrap}
+.st.go{background:var(--ok-soft);color:var(--ok)}
+.st.chk{background:var(--hi-soft);color:var(--ink)}
+.st.no{background:var(--alert);color:var(--card)}
+.tool.no{border:2px solid var(--alert)}
+.tgroup{font-family:var(--display);font-size:1.2rem;margin-top:6px}
+.src{font-size:.8rem;color:var(--ink-2);display:grid;gap:2px}
+.src a{color:var(--ink-2);word-break:break-all}
+@media (max-width:720px){.tools{grid-template-columns:1fr}.rstep{grid-template-columns:44px 1fr}}
+
 /* info */
 .timeline{display:grid;gap:0;border-left:3px solid var(--ink);margin-left:6px}
 .tl{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0 10px 18px;position:relative}
@@ -182,7 +207,7 @@ td input,td select{border:0;background:transparent;padding:6px}
 <body>
 
 <nav class="top" aria-label="섹션 이동"><div class="in">
-  <a href="#theme">주제</a><a href="#idea">아이디어 뽑기</a><a href="#steps">제작 순서</a><a href="#plan">시나리오</a><a href="#ailog">AI 기록</a><a href="#score">셀프 심사</a><a href="#rules">꼭 지킬 것</a><a href="#submit">제출</a><a href="#info">일정·시상</a>
+  <a href="#theme">주제</a><a href="#idea">아이디어 뽑기</a><a href="#steps">제작 순서</a><a href="#tools">AI 왕초보</a><a href="#plan">시나리오</a><a href="#ailog">AI 기록</a><a href="#score">셀프 심사</a><a href="#rules">꼭 지킬 것</a><a href="#submit">제출</a><a href="#info">일정·시상</a>
 </div></nav>
 
 <div class="wrap">
@@ -278,6 +303,118 @@ td input,td select{border:0;background:transparent;padding:6px}
     <div class="step"><span class="n">4단계</span><h3>AI로 만들기</h3><span class="when">10.23~10.26</span><p>이미지, 영상, 음악, 목소리 생성. 쓴 도구와 요금제를 바로바로 기록하기.</p></div>
     <div class="step"><span class="n">5단계</span><h3>편집하기</h3><span class="when">10.27~10.29</span><p>컷 잇기, 자막, 효과음, AI 제작 고지 문구 넣기. mp4로 내보내고 용량 확인.</p></div>
     <div class="step"><span class="n">6단계</span><h3>서류 · 제출</h3><span class="when">10.30</span><p>작품소개서·동의서를 PDF로 만들고 이메일 보내기. 원본 파일은 지우지 말고 보관.</p></div>
+  </div>
+</section>
+
+<!-- AI 왕초보 -->
+<section id="tools">
+  <div class="sec-head">
+    <span class="label">AI 영상 왕초보 코스</span>
+    <h2>돈 안 들이고 AI 영상 만들기</h2>
+    <p>AI 영상을 처음 만들어도 괜찮아요. 핵심은 <b>“AI로 그림을 만들고 → 움직이게 하고 → AI 목소리를 입히는 것”</b>이에요. 다만 <b>무료라고 다 출품할 수 있는 건 아니에요.</b> 공모전 규칙상 상업적 이용·배포 권한이 없는 무료 결과물은 낼 수 없어서, 아래 길을 따라가는 게 안전해요.</p>
+  </div>
+
+  <div class="route">
+    <div class="rstep"><div class="k">1</div><div>
+      <h3>선생님께 학교 계정 받기</h3>
+      <p>대부분의 AI 서비스는 <b>만 13세 이상</b>만 개인 가입이 돼요. 그래서 학교용 무료 서비스인 <b>Canva 교육용</b> 또는 <b>Adobe Express 교육용</b>을 선생님 초대로 쓰는 게 가장 쉬워요. 초등학생도 선생님 초대로 쓸 수 있어요.</p>
+      <p class="tip">시작 전에 보호자 동의서([서식3])부터 받아 두세요.</p>
+    </div></div>
+    <div class="rstep"><div class="k">2</div><div>
+      <h3>시나리오 노트 먼저 채우기</h3>
+      <p>아래 “시나리오” 칸의 5장면을 먼저 써요. 무엇을 만들지 정하고 AI를 켜야 크레딧(생성 횟수)을 아낄 수 있어요.</p>
+    </div></div>
+    <div class="rstep"><div class="k">3</div><div>
+      <h3>장면마다 AI 그림 2~3장 만들기</h3>
+      <ul>
+        <li>Canva: 왼쪽 메뉴 <b>앱</b>에서 <b>Magic Media(매직 미디어)</b>를 찾아 열기 → <b>이미지</b> 선택 → 프롬프트 붙여넣기</li>
+        <li>Adobe Express: <b>이미지 생성(Firefly)</b> 메뉴에서 같은 방법으로</li>
+        <li>프롬프트는 아래 “프롬프트 만들기”로 쓰면 편해요.</li>
+      </ul>
+      <p class="tip">주인공 모습이 장면마다 바뀌지 않게, 주인공 설명 문장(예: “노란 비옷을 입은 단발머리 초등학생”)을 매번 똑같이 붙여 넣으세요.</p>
+    </div></div>
+    <div class="rstep"><div class="k">4</div><div>
+      <h3>그림을 움직이게 하기</h3>
+      <ul>
+        <li><b>방법 A · 확대·이동 효과:</b> 그림을 천천히 확대하거나 옆으로 흘러가게 해요. 무료이고 가장 쉬워요. 다큐멘터리에서 많이 쓰는 방법이에요.</li>
+        <li><b>방법 B · 장면 애니메이션:</b> 편집기의 <b>애니메이션</b> 버튼으로 등장·움직임 효과를 줘요. Adobe Express에는 캐릭터를 목소리에 맞춰 움직이는 기능도 있어요.</li>
+        <li><b>방법 C · AI 짧은 영상:</b> 학교 계정에서 영상 생성이 열려 있으면 Magic Media의 <b>동영상</b>으로 몇 초짜리 클립을 만들어요. 가장 멋지지만 횟수 제한이 있어서 3장면(발명품 등장)처럼 중요한 곳에만 써요.</li>
+      </ul>
+      <p class="tip">한 장면은 3~6초가 적당해요. 2분 30초면 그림·클립 30~40개쯤 필요해요.</p>
+    </div></div>
+    <div class="rstep"><div class="k">5</div><div>
+      <h3>목소리 입히기</h3>
+      <ul>
+        <li><b>AI 목소리:</b> 내레이션 대본을 Clipchamp의 <b>텍스트 음성 변환</b>(또는 Vrew의 AI 목소리)에 붙여 넣고 한국어 목소리를 골라요.</li>
+        <li><b>내 목소리:</b> 직접 녹음해도 좋아요. 작품소개서의 “직접 한 부분”이 되고 진정성도 올라가요.</li>
+      </ul>
+    </div></div>
+    <div class="rstep"><div class="k">6</div><div>
+      <h3>편집하고 자막 넣기</h3>
+      <p>Clipchamp(윈도우 11에 기본으로 들어 있어요) 또는 Canva·Adobe Express 편집기에서 그림과 클립을 순서대로 놓고 목소리에 맞춰 길이를 맞춰요. <b>자동 자막</b>을 켠 다음 틀린 글자를 고치세요.</p>
+    </div></div>
+    <div class="rstep"><div class="k">7</div><div>
+      <h3>음악 고르기</h3>
+      <p>AI 음악이 꼭 필요한 건 아니에요. 무료 AI 음악 서비스는 대부분 무료 요금제로 만든 곡을 출품할 수 없어요. 대신 <b>공유마당(한국저작권위원회)</b>에서 “자유 이용” 음원 중 상업적 이용이 허락된 곡을 고르거나, 직접 연주·녹음하세요.</p>
+    </div></div>
+    <div class="rstep"><div class="k">8</div><div>
+      <h3>마무리하고 내보내기</h3>
+      <ul>
+        <li>AI로 만든 화면 아래에 <b>“생성형 AI 기반으로 제작되었습니다.”</b> 넣기</li>
+        <li>mp4 · 1080p로 내보내기 → 길이 2~3분, 500MB 이하인지 확인</li>
+        <li>만든 그림·클립 원본과 프롬프트 화면 캡처는 지우지 말고 폴더에 보관</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="tgroup">도구별 안내</div>
+  <div class="tools">
+    <div class="tool"><div class="top"><h3>Canva 교육용</h3><span class="st go">학교 계정 추천</span></div>
+      <dl><dt>쓰임</dt><dd>AI 그림(Magic Media), 짧은 AI 영상, 편집, 애니메이션</dd>
+      <dt>무료</dt><dd>초·중·고 학교와 학생은 무료 (선생님이 학급 초대)</dd>
+      <dt>나이</dt><dd>만 13세 미만도 선생님 초대로 사용 가능</dd>
+      <dt>주의</dt><dd>AI로 만든 결과물은 Canva 안내상 상업적 이용 가능. 하지만 교육용 계정의 유료(Pro) 사진·음악 소재는 비상업용으로만 쓸 수 있어서 영상에 넣지 않는 게 안전해요.</dd></dl></div>
+    <div class="tool"><div class="top"><h3>Adobe Express 교육용</h3><span class="st go">학교 계정 추천</span></div>
+      <dl><dt>쓰임</dt><dd>AI 그림(Firefly), 캐릭터 애니메이션, 영상 편집</dd>
+      <dt>무료</dt><dd>초·중·고 학교와 학생은 무료 (선생님 초대 또는 학교 관리자 발급)</dd>
+      <dt>나이</dt><dd>학교 관리 계정으로 사용</dd>
+      <dt>주의</dt><dd>Firefly는 저작권 걱정이 적은 자료로 학습한 AI예요. 생성 크레딧(횟수) 한도가 있어요.</dd></dl></div>
+    <div class="tool"><div class="top"><h3>Clipchamp</h3><span class="st chk">약관 확인 필요</span></div>
+      <dl><dt>쓰임</dt><dd>영상 편집, AI 목소리(한국어), 자동 자막</dd>
+      <dt>무료</dt><dd>윈도우 11 기본 앱. 무료 요금제에 AI 목소리·자동 자막 포함, 1080p 내보내기</dd>
+      <dt>주의</dt><dd>유료 기능을 쓰면 워터마크가 생겨요. 무료 스톡 영상·음악은 각각 조건이 달라 쓰지 않는 게 안전해요.</dd></dl></div>
+    <div class="tool"><div class="top"><h3>Vrew (브루)</h3><span class="st chk">약관 확인 필요</span></div>
+      <dl><dt>쓰임</dt><dd>한국어 자동 자막, AI 목소리, 컷 편집</dd>
+      <dt>무료</dt><dd>무료 요금제가 있어요. 사용량(크레딧) 한도가 있어요.</dd>
+      <dt>주의</dt><dd>무료 요금제에서 쓸 수 있는 목소리와 이용 조건은 요금 정책 페이지에서 꼭 확인하세요.</dd></dl></div>
+  </div>
+
+  <div class="tgroup" style="color:var(--alert)">무료 버전으로는 출품하면 안 되는 것</div>
+  <div class="tools">
+    <div class="tool no"><div class="top"><h3>Suno 무료 요금제</h3><span class="st no">출품 불가</span></div>
+      <dl><dt>이유</dt><dd>무료로 만든 노래는 개인·비상업용으로만 쓸 수 있어요. 나중에 유료로 바꿔도 예전에 만든 곡은 그대로 비상업용이에요.</dd></dl></div>
+    <div class="tool no"><div class="top"><h3>Kling 무료 요금제</h3><span class="st no">출품 불가</span></div>
+      <dl><dt>이유</dt><dd>무료 결과물은 비상업용이고 워터마크가 붙어요.</dd></dl></div>
+    <div class="tool no"><div class="top"><h3>Google Veo 영상 생성</h3><span class="st no">학생 사용 불가</span></div>
+      <dl><dt>이유</dt><dd>교육용 Gemini에서도 Veo 영상 생성은 만 18세 이상으로 안내돼요.</dd></dl></div>
+    <div class="tool no"><div class="top"><h3>개인 계정 AI 서비스</h3><span class="st no">나이 확인</span></div>
+      <dl><dt>이유</dt><dd>대화형 AI와 그림·영상 AI 대부분은 만 13세 미만 가입이 안 되고, 만 18세 미만은 보호자 동의가 필요한 곳이 많아요. 나이를 속여 만든 계정의 작품은 수상이 취소돼요.</dd></dl></div>
+  </div>
+
+  <div class="panel" style="border-width:1px">
+    <h3>선생님께</h3>
+    <p style="font-size:.95rem;color:var(--ink-2)">Canva 교육용(canva.com/education)이나 Adobe Express 교육용은 교사 인증 후 학급을 만들고 학생을 초대하면 바로 쓸 수 있어요. AI 기능은 관리자 설정에서 켜고 끌 수 있으니 학교 정보 담당 선생님과 함께 확인해 주세요. 공모전 공문의 [서식4] “AI 약관·연령 제한 확인 안내문”과 다른 내용이 있으면 서식4를 따라 주세요. 애매하면 교육원(054-760-3111)에 미리 물어보는 게 가장 확실해요.</p>
+  </div>
+
+  <div class="src">
+    <span>2026. 10. 12. 기준으로 공개 자료를 확인해 정리했어요. 서비스 약관과 요금제는 자주 바뀌니 쓰기 전에 각 서비스의 최신 약관을 다시 확인하세요.</span>
+    <a href="https://www.canva.com/help/using-magic-studio-safely-and-legally/" target="_blank" rel="noopener">Canva · AI 기능 안전하고 합법적으로 쓰기</a>
+    <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank" rel="noopener">Canva · 콘텐츠 라이선스 (교육용 콘텐츠는 비상업용)</a>
+    <a href="https://helpx.adobe.com/express/web/adobe-express-for-education/for-educators/education-overview.html" target="_blank" rel="noopener">Adobe Express 교육용 안내</a>
+    <a href="https://clipchamp.com/pricing/" target="_blank" rel="noopener">Clipchamp 요금제</a>
+    <a href="https://vrew.ai/ko/pricing/" target="_blank" rel="noopener">Vrew 요금제</a>
+    <a href="https://services.google.com/fh/files/misc/gfe_2025_launch_guide.pdf" target="_blank" rel="noopener">Google Gemini for Education 안내서 (Veo 18세 이상)</a>
+    <a href="https://gongu.copyright.or.kr/" target="_blank" rel="noopener">공유마당 (자유 이용 저작물)</a>
   </div>
 </section>
 
